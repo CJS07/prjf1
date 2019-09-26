@@ -38,7 +38,7 @@ void loop() {
   Serial.println("\nmy room temperature :");
   Serial.println(temp);
   
-  if(client.connect(server, 80))
+  if(client.connect(server, 80)&&temp!=85&&temp!=-127)
   {
     String sendData = apiKey + "&field2=" + temp + "\r\n\r\n";
 
